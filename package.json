@@ -6,28 +6,31 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
+    "preview": "pnpm run build-only && wrangler dev",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build"
+    "type-check": "vue-tsc --build",
+    "deploy": "pnpm run build-only && wrangler deploy"
   },
   "dependencies": {
-    "vue": "^3.5.32",
-    "@fortawesome/fontawesome-free": "^7.2.0"
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "vue": "^3.5.32"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.40.0",
+    "@tailwindcss/postcss": "^4.0.0",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.12.2",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/tsconfig": "^0.9.1",
-    "npm-run-all2": "^8.0.4",
-    "tailwindcss": "^4.0.0",
-    "postcss": "^8.4.24",
     "autoprefixer": "^10.4.14",
-    "@tailwindcss/postcss": "^4.0.0",
+    "npm-run-all2": "^8.0.4",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^4.0.0",
     "typescript": "~6.0.0",
     "vite": "^8.0.8",
     "vite-plugin-vue-devtools": "^8.1.1",
-    "vue-tsc": "^3.2.6"
+    "vue-tsc": "^3.2.6",
+    "wrangler": "^4.98.0"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
