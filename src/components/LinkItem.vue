@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <a :href="url || '#'" 
+  <a :href="url || '#'" target="_blank" 
      class="group block w-full bg-white border border-gray-300 rounded-[30px] p-2 pr-5 flex items-center justify-between hover:shadow-md transition-shadow">
     
     <div class="flex items-center space-x-4 min-w-0 flex-1">
