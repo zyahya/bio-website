@@ -39,4 +39,9 @@ export const links: LinkItem[] = [
     url: "https://www.hackerrank.com/profile/ziadyahya",
     icon: "fa-brands fa-hackerrank",
   },
+  {
+    id: 6,
+    title: "Codewars",
+    url: "https://www.codewars.com/users/zyahya",
+  },
 ];
